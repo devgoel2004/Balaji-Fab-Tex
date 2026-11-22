@@ -15,15 +15,16 @@ const collections = [
 ];
 const businessPhone = '+91 9897525611';
 const additionalPhone = '+91 98370 66828';
-const whatsappUrl = 'https://wa.me/8791409356?text=' + encodeURIComponent('Hello Balaji Fab Tex, I am interested in your wholesale home textile products. Please share your product catalogue and details.');
+const whatsappUrl = 'https://wa.me/918791409356?text=' + encodeURIComponent('Hello Balaji Fab Tex! I am interested in your products and would like to know more about your collection, pricing, available designs, sizes, and wholesale details. Please share your catalogue and information.');
 const businessAddress = 'Agarsen Rd, near Sai Mandir, Market, Muradnagar, Ghaziabad, Uttar Pradesh 201206';
 const mapUrl = 'https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIGCAEQRRg7MgYIAhAjGCcyCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yBggGEEUYPTIGCAcQRRg80gEIMzU4NWowajmoAgCwAgA&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KcPf70ui9Qw5MdvpO8PvUEkf&daddr=Agarsen+Rd,+near+Sai+Mandir,+Market,+Muradnagar,+Uttar+Pradesh+201206';
 
 const bedsheetProducts = [
   { name: 'Alankar', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Alankar.png', tag: 'Jaquard', number: '01' },
-  { name: 'Printed Cotton Bedsheets', text: 'Soft, breathable cotton bedsheets available in a range of everyday prints.', image: '/images/hero.jpg', tag: 'Printed cotton', number: '02' },
-  { name: 'Luxury 3-Piece Sets', text: 'Coordinated bedsheet and pillow cover sets for a complete bedroom look.', image: '/images/about.jpg', tag: '3-piece set', number: '03' },
-  { name: 'Wholesale Bedsheet Range', text: 'Durable and attractive designs curated for retailers, distributors and bulk buyers.', image: '/images/bedsheets.png', tag: 'Bulk orders', number: '04' },
+  { name: 'Black Cherry', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Black-Cherry.png', tag: 'Jaquard', number: '02' },
+  { name: 'Gold Leaf', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Gold-Leaf.png', tag: 'Jaquard', number: '03' },
+  { name: 'Gravity', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Gravity.png', tag: 'Jaquard', number: '04' },
+  { name: 'Smooth', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Smooth.png', tag: 'Jaquard', number: '05' },
 ];
 
 function BedsheetsPage({ menuOpen, setMenuOpen, closeMenu }) {
@@ -116,7 +117,7 @@ function App() {
             <div className="hero-small-note"><span className="note-mark">BFT</span><span>Textile manufacturing<br/>with a focus on quality.</span></div>
           </div>
           <div className="hero-image-wrap">
-            <img src="/images/hero.jpg" alt="Elegant bedroom with soft home textile styling" className="hero-image"/>
+            <img src="/images/hero.png" alt="Elegant bedroom with soft home textile styling" className="hero-image"/>
             <div className="hero-photo-shade"/>
             <div className="hero-photo-caption"><span>BALAJI FAB TEX</span><strong>Jaquard bedsheets<br/>& sofa covers.</strong><a href="#collections">Discover the range <ArrowUpRight size={15}/></a></div>
           </div>
