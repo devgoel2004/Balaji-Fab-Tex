@@ -109,16 +109,16 @@ function App() {
       <main>
         <section className="hero" id="home">
           <div className="hero-content">
-            <p className="eyebrow">PREMIUM HOME TEXTILES <span className="eyebrow-line"/></p>
-            <h1>Made for comfort.<br/><em>Designed for every home.</em></h1>
-            <p className="hero-description">Manufacturers of jaquart bedsheets, sofa covers, cushion covers and more — serving wholesalers, retailers and bulk buyers.</p>
+            <p className="eyebrow">WELCOME TO <span className="eyebrow-line"/></p>
+            <h1>Welcome to<br/><em>Balaji Fab Tex.</em></h1>
+            <p className="hero-description">We manufacture Jaquard bedsheets and sofa covers with care, serving homes, retailers and wholesale partners.</p>
             <div className="hero-buttons"><a className="button-primary" href="#collections">Explore Products <ArrowRight size={17}/></a><a className="button-secondary" href={whatsappUrl} target="_blank" rel="noreferrer">Get Wholesale Quote <ArrowUpRight size={16}/></a></div>
             <div className="hero-small-note"><span className="note-mark">BFT</span><span>Textile manufacturing<br/>with a focus on quality.</span></div>
           </div>
           <div className="hero-image-wrap">
             <img src="/images/hero.jpg" alt="Elegant bedroom with soft home textile styling" className="hero-image"/>
             <div className="hero-photo-shade"/>
-            <div className="hero-photo-caption"><span>THE BFT COLLECTION</span><strong>Comfort in every<br/>detail.</strong><a href="#collections">Discover the range <ArrowUpRight size={15}/></a></div>
+            <div className="hero-photo-caption"><span>BALAJI FAB TEX</span><strong>Jaquard bedsheets<br/>& sofa covers.</strong><a href="#collections">Discover the range <ArrowUpRight size={15}/></a></div>
           </div>
         </section>
         <section className="trust-strip" aria-label="Business highlights">
