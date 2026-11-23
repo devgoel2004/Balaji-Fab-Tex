@@ -27,6 +27,12 @@ const bedsheetProducts = [
   { name: 'Smooth', text: 'Luxury 3 - Piece Sets', image: '/images/Bedsheets/Smooth.png', tag: 'Jaquard', number: '05' },
 ];
 
+const sofaCoverProducts = [
+  { name: 'Sagun', text: 'A stylish design to refresh your living space.', image: '/images/Sofa%20Covers/Sagun.png', tag: 'Sofa cover', number: '01' },
+  { name: 'Archie', text: 'A comfortable, practical choice for everyday living.', image: '/images/Sofa%20Covers/Archie.png', tag: 'Sofa cover', number: '02' },
+  { name: 'Rose', text: 'A distinctive look to complement your home decor.', image: '/images/Sofa%20Covers/Rose.png', tag: 'Sofa cover', number: '03' },
+];
+
 function BedsheetsPage({ menuOpen, setMenuOpen, closeMenu }) {
   return (
     <div className="site-shell">
@@ -83,11 +89,70 @@ function BedsheetsPage({ menuOpen, setMenuOpen, closeMenu }) {
   );
 }
 
+function SofaCoversPage({ menuOpen, setMenuOpen, closeMenu }) {
+  return (
+    <div className="site-shell">
+      <div className="utility-bar">
+        <span>HOME TEXTILE MANUFACTURERS</span>
+        <span className="utility-center">WHOLESALE · BULK ORDERS · RETAIL PARTNERS</span>
+        <span className="utility-right">MADE WITH CARE <span className="gold-dot">✦</span></span>
+      </div>
+      <header className="header">
+        <a href="/" className="brand" aria-label="Balaji Fab Tex homepage"><img src={logo} alt="Balaji Fab Tex logo" /></a>
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+          <a href="/#home" onClick={closeMenu}>Home</a>
+          <a href="/#collections" onClick={closeMenu}>Products</a>
+          <a href="/#about" onClick={closeMenu}>About Us</a>
+          <a href="/#contact" onClick={closeMenu}>Contact</a>
+        </nav>
+        <a className="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle size={17}/> Wholesale Enquiry</a>
+        <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X/> : <Menu/>}</button>
+      </header>
+      <main>
+        <section className="bedsheets-hero">
+          <div className="bedsheets-hero-copy">
+            <p className="eyebrow">THE SOFA COVER COLLECTION <span className="eyebrow-line"/></p>
+            <h1>Refresh your<br/><em>living space.</em></h1>
+            <p>Explore sofa cover designs made to bring comfort and style to your home.</p>
+            <p>Browse our collection for retail, wholesale and bulk enquiries.</p>
+            <a className="button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">Request catalogue <ArrowUpRight size={16}/></a>
+          </div>
+          <div className="bedsheets-hero-image"><img src="/images/sofa-cover.png" alt="Balaji Fab Tex sofa cover collection"/></div>
+        </section>
+        <section className="bedsheets-catalog section">
+          <div className="collections-heading">
+            <p className="eyebrow centered">EXPLORE SOFA COVERS</p>
+            <h2>Find a style for <em>your home</em></h2>
+            <p className="collections-intro">Explore the Balaji Fab Tex sofa cover collection.</p>
+          </div>
+          <div className="bedsheets-grid">
+            {sofaCoverProducts.map((item) => (
+              <article className="bedsheet-card" key={item.number}>
+                <div className="bedsheet-photo"><img src={item.image} alt={`${item.name} sofa cover`}/><span>{item.tag}</span></div>
+                <div className="bedsheet-details"><p>COLLECTION {item.number}</p><h3>{item.name}</h3><span>{item.text}</span><a href={whatsappUrl} target="_blank" rel="noreferrer">Enquire now <ArrowUpRight size={15}/></a></div>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section className="bedsheets-contact">
+          <div><p className="eyebrow light">WHOLESALE ENQUIRIES</p><h2>Looking for sofa covers<br/><em>in bulk?</em></h2></div>
+          <a className="button-light" href={whatsappUrl} target="_blank" rel="noreferrer">Speak with our team <ArrowUpRight size={16}/></a>
+        </section>
+      </main>
+      <footer className="footer"><div className="footer-top"><div className="footer-brand"><img src={logoLuxury} alt="Balaji Fab Tex brand logo"/><p>Textiles for the spaces<br/>that bring us together.</p></div><div className="footer-nav"><div><span>EXPLORE</span><a href="/#home">Home</a><a href="/#collections">Products</a><a href="/#about">About Us</a></div><div><span>CONTACT</span><a href="/#contact">Business enquiries</a><a href={`tel:${businessPhone.replaceAll(' ', '')}`}>{businessPhone}</a><a href={`tel:${additionalPhone.replaceAll(' ', '')}`}>{additionalPhone}</a></div><div className="footer-business"><span>VISIT US</span><a href={mapUrl} target="_blank" rel="noreferrer"><MapPin/>{businessAddress}</a><span className="footer-hours"><Clock/> Mon - Sat, 9am - 6pm</span></div></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} BALAJI FAB TEX. ALL RIGHTS RESERVED.</span><span>HOME TEXTILES · WHOLESALE & MANUFACTURING</span></div></footer>
+      <a className="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp enquiry"><MessageCircle/></a>
+    </div>
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
   if (window.location.pathname === '/bedsheets') {
     return <BedsheetsPage menuOpen={menuOpen} setMenuOpen={setMenuOpen} closeMenu={closeMenu}/>;
+  }
+  if (window.location.pathname === '/sofa-covers') {
+    return <SofaCoversPage menuOpen={menuOpen} setMenuOpen={setMenuOpen} closeMenu={closeMenu}/>;
   }
   return (
     <div className="site-shell">
@@ -130,7 +195,7 @@ function App() {
         </section>
         <section className="collections section" id="collections">
           <div className="collections-heading"><p className="eyebrow centered">OUR COLLECTIONS</p><h2>Explore our <em>product range</em></h2><p className="collections-intro">Discover textile essentials selected for quality, comfort and everyday style.</p></div>
-          <div className="collection-grid">{collections.map((item)=><article className="collection-card" key={item.number}><div className="collection-photo"><img src={item.image} alt={item.title}/><span className="photo-tag">{item.tag}</span><span className="photo-number">{item.number}</span><a className="round-arrow" href={item.title === 'Bedsheets' ? '/bedsheets' : '#contact'} aria-label={item.title === 'Bedsheets' ? 'Explore bedsheets' : `Enquire about ${item.title}`}><ArrowUpRight/></a></div><div className="collection-details"><h3>{item.title}</h3><p>{item.text}</p>{item.title === 'Bedsheets' && <a className="collection-explore" href="/bedsheets">Explore bedsheets <ArrowRight size={15}/></a>}</div></article>)}</div>
+          <div className="collection-grid">{collections.map((item)=><article className="collection-card" key={item.number}><div className="collection-photo"><img src={item.image} alt={item.title}/><span className="photo-tag">{item.tag}</span><span className="photo-number">{item.number}</span><a className="round-arrow" href={item.title === 'Bedsheets' ? '/bedsheets' : item.title === 'Sofa Covers' ? '/sofa-covers' : '#contact'} aria-label={item.title === 'Bedsheets' ? 'Explore bedsheets' : item.title === 'Sofa Covers' ? 'Explore sofa covers' : `Enquire about ${item.title}`}><ArrowUpRight/></a></div><div className="collection-details"><h3>{item.title}</h3><p>{item.text}</p>{item.title === 'Bedsheets' && <a className="collection-explore" href="/bedsheets">Explore bedsheets <ArrowRight size={15}/></a>}{item.title === 'Sofa Covers' && <a className="collection-explore" href="/sofa-covers">Explore sofa covers <ArrowRight size={15}/></a>}</div></article>)}</div>
           <div className="collection-bottom"><span>MADE WITH CARE · BUILT ON TRUST</span><a href="#contact">Enquire about our products <ArrowRight size={16}/></a></div>
         </section>
         <section className="about-section" id="about">
