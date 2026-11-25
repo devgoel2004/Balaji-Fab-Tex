@@ -11,3 +11,6 @@
   .phone-list{display:flex;flex-direction:column;gap:8px}
 .bedsheet-sizes{display:flex;gap:8px;margin-top:16px}.bedsheet-sizes span{border:1px solid #c9baa8;color:#5d5147;padding:7px 10px;font-size:9px;letter-spacing:.3px;background:#f7f2ea}
 @media(min-width:1025px) and (hover:hover) and (pointer:fine){.wholesale-copy p:last-child{font-size:13px}.contact-copy>p:last-child{font-size:14px}.contact-label{font-size:10px}.contact-meta a,.contact-meta span{font-size:12px}.footer-nav div>span:not(.footer-hours){font-size:9px}.footer-nav a,.footer-nav .footer-hours{font-size:12px}.footer-bottom{font-size:9px}}
+.hero h1.homepage-heading{font-size:clamp(36px,4vw,60px)}
+@media(max-width:1000px){.hero-content{padding-left:8%;padding-right:5%}.hero h1.homepage-heading{font-size:clamp(32px,4vw,42px)}}
+@media(max-width:700px){.hero h1.homepage-heading{font-size:clamp(36px,10vw,48px)}}

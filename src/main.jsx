@@ -44,8 +44,8 @@ function App() {
         <section className="hero" id="home">
           <div className="hero-content">
             <p className="eyebrow">WELCOME TO <span className="eyebrow-line"/></p>
-            <h1>Welcome to<br/><em>Balaji Fab Tex.</em></h1>
-            <p className="hero-description">Balaji Fab Tex is a home textile manufacturer in Muradnagar, Ghaziabad, creating Jacquard bedsheets and sofa covers for homes, retailers and wholesale partners across India.</p>
+            <h1 className="homepage-heading">Bedsheet &amp; Sofa<br/>Cover Manufacturers<br/><em>in Ghaziabad, India</em></h1>
+            <p className="hero-description">Balaji Fab Tex is a Ghaziabad-based manufacturer and wholesale supplier of Jacquard bedsheets, sofa covers, cushion covers and home furnishing products, serving bulk buyers across Delhi NCR and India.</p>
             <div className="hero-buttons"><a className="button-primary" href="#collections">Explore Products <ArrowRight size={17}/></a><a className="button-secondary" href={whatsappUrl} target="_blank" rel="noreferrer">Get Wholesale Quote <ArrowUpRight size={16}/></a></div>
             <div className="hero-small-note"><span className="note-mark">BFT</span><span>Textile manufacturing<br/>with a focus on quality.</span></div>
           </div>
